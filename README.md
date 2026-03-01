@@ -1,8 +1,6 @@
 <div align="center">
 
-<img src="Icons/logo1.png" alt="E-Library Logo" width="120"/>
-
-# 📚 E-Library
+<img src="Icons/logo1.png" alt="E-Library Logo" width="180"/>
 
 ### A modern Windows desktop application for managing your personal digital book collection
 
