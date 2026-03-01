@@ -1,18 +1,25 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/Platform-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white"/>
-<img src="https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white"/>
-<img src="https://img.shields.io/badge/.NET_Framework-4.8-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
-<img src="https://img.shields.io/badge/Database-SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white"/>
-<img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
+<img src="Icons/logo1.png" alt="E-Library Logo" width="120"/>
 
 # 📚 E-Library
 
-**A modern Windows desktop application for managing your personal digital book collection — with category organization, PDF preview, and a clean, intuitive interface.**
+### A modern Windows desktop application for managing your personal digital book collection
+
+Organize books by category · Preview PDFs instantly · Search your library · All stored locally
 
 <br/>
 
-[![Download v1.0.0](https://img.shields.io/badge/⬇️%20Download%20v1.0.0-E--LibrarySetup.exe-blue?style=for-the-badge)](https://github.com/Mazen657/E-Library/releases/download/v1.0.0/E-LibrarySetup.exe)
+[![Platform](https://img.shields.io/badge/Platform-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Mazen657/E-Library)
+[![Language](https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)](https://github.com/Mazen657/E-Library)
+[![Framework](https://img.shields.io/badge/.NET_Framework-4.8-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://github.com/Mazen657/E-Library)
+[![Database](https://img.shields.io/badge/Database-SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://github.com/Mazen657/E-Library)
+[![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
+[![Release](https://img.shields.io/badge/Release-v1.0.0-f59e0b?style=for-the-badge)](https://github.com/Mazen657/E-Library/releases/tag/v1.0.0)
+
+<br/>
+
+[![Download Installer](https://img.shields.io/badge/⬇️%20Download%20for%20Windows-E--LibrarySetup.exe%20v1.0.0-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Mazen657/E-Library/releases/download/v1.0.0/E-LibrarySetup.exe)
 
 </div>
 
@@ -23,20 +30,56 @@
 - [About](#-about)
 - [Screenshots](#-screenshots)
 - [Features](#-features)
-- [Tech Stack](#-tech-stack)
+- [Tech Stack](#tech-stack)
+- [System Requirements](#-system-requirements)
 - [Installation](#-installation)
 - [Getting Started](#-getting-started)
-- [Database Schema](#-database-schema)
+- [Database Schema](#database-schema)
 - [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
 - [License](#-license)
 
 ---
 
 ## 🔍 About
 
-**E-Library** is a standalone Windows desktop library management system built with C# and WinForms. It lets you organize your digital book collection locally — no internet required. You can catalog books by category, store PDF files, and preview them directly inside the app.
+**E-Library** is a lightweight, fully offline Windows desktop application for managing your personal digital book collection. Built with **C# and WinForms**, it gives you a clean interface to catalog books, organize them into categories, and read them directly inside the app — no internet or server required.
 
-All data is stored in an embedded **SQLite** database that is automatically created on first launch. The app is lightweight, fast, and designed for personal or small-scale use.
+All your data is stored in an embedded **SQLite** database that is created automatically on first launch. Whether you're a student, researcher, or book enthusiast, E-Library makes it easy to keep your digital shelf organized.
+
+> 🏷️ **Standalone · Offline · No server setup · Instant launch**
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+| Splash Screen | Home Screen |
+|:-:|:-:|
+| ![Home](Screenshot/Screenshot%202026-03-01%20235254.png) | ![Books](Screenshot/Screenshot%202026-03-02%20000828.png) |
+
+| Add Book | Book Details |
+|:-:|:-:|
+| ![Add Book](Screenshot/Screenshot%202026-03-02%20000530.png) | ![PDF Preview](Screenshot/Screenshot%202026-03-02%20000940.png) |
+
+| Categories | Search |
+|:-:|:-:|
+| ![Categories](Screenshot/Screenshot%202026-03-02%20000856.png) | ![Search](Screenshot/Screenshot%202026-03-02%20001019.png) |
+
+| Folder | Setting Apearance |
+|:-:|:-:|
+| ![Settings](Screenshot/Screenshot%202026-03-02%20000917.png) | ![Splash](Screenshot/Screenshot%202026-03-02%20000057.png) |
+
+| Setting Library | Setting Data |
+|:-:|:-:|
+| ![Settings](Screenshot/Screenshot%202026-03-02%20000141.png) | ![Splash](Screenshot/Screenshot%202026-03-02%20000244.png) |
+
+| Setting About | 
+|:-:|
+| ![Settings](Screenshot/Screenshot%202026-03-02%20000313.png) | 
+
+</div>
 
 ---
 
@@ -44,115 +87,145 @@ All data is stored in an embedded **SQLite** database that is automatically crea
 
 | Feature | Description |
 |---|---|
-| 📚 Book Management | Add, edit, and delete book entries with full metadata |
-| 🗂️ Category System | Organize books into custom categories |
-| 🔍 Search | Instantly search and filter through your entire library |
-| 📄 PDF Preview | View PDF book files directly inside the app using PdfiumViewer |
-| 🗄️ Local Database | Embedded SQLite database — no server setup needed |
-| 🖥️ Splash Screen | Clean startup experience with loading screen |
-| 🔒 Single Instance | Prevents duplicate app windows from opening |
-| ⚙️ Settings | Customize application preferences |
-| 🃏 Card View | Books displayed in a modern card-style UI |
+| 📚 **Book Management** | Add, edit, view, and delete books with full metadata |
+| 🗂️ **Category System** | Organize your collection into custom categories |
+| 🔍 **Instant Search** | Real-time search and filter across your entire library |
+| 📄 **PDF Preview** | Open and read PDF files directly inside the app via PdfiumViewer |
+| 🃏 **Card View** | Beautiful card-style UI for browsing your collection |
+| 🗄️ **Local SQLite Database** | Embedded, file-based database — no external server needed |
+| 🖼️ **Book Covers** | Auto-extract or manually assign cover images for each book |
+| 🖥️ **Splash Screen** | Polished startup experience with loading animation |
+| 🔒 **Single Instance Guard** | Prevents duplicate app windows from opening |
+| ⚙️ **Settings Panel** | Customize app appearance and PDF viewer preferences |
+| 🎨 **Theme Support** | Configurable UI color themes |
+| 🔄 **Auto Schema Updates** | Database schema updates automatically on new versions |
 
 ---
 
+<a id="tech-stack"></a>
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
+| Layer | Technology | Details |
+|---|---|---|
+| **Language** | C# | Primary programming language |
+| **Framework** | .NET Framework 4.8 | Windows desktop target |
+| **UI** | Windows Forms (WinForms) | Native Windows desktop UI |
+| **Database** | SQLite | Via `Microsoft.Data.Sqlite.Core` |
+| **PDF Viewer** | PdfiumViewer | In-app PDF rendering |
+| **SQLite Bindings** | SQLitePCLRaw | Native SQLite runtime |
+| **Build System** | Visual Studio (.sln) | VS 2019 / 2022 compatible |
+| **License** | MIT | Free and open source |
+
+---
+
+## 💻 System Requirements
+
+| Requirement | Minimum |
 |---|---|
-| Language | C# |
-| Framework | .NET Framework 4.8 |
-| UI | Windows Forms (WinForms) |
-| Database | SQLite via `Microsoft.Data.Sqlite` |
-| PDF Viewer | `PdfiumViewer` |
-| Build System | Visual Studio Solution |
-| License | MIT |
+| **Operating System** | Windows 7 / 8 / 10 / 11 |
+| **Architecture** | x86 or x64 |
+| **Runtime** | .NET Framework 4.8 |
+| **Disk Space** | ~50 MB (app) + your book files |
+| **RAM** | 256 MB minimum |
 
 ---
 
 ## 💾 Installation
 
-### Option 1 — Download Installer (Recommended)
+### ✅ Option 1 — Download Installer *(Recommended)*
 
-Click the button below to download the ready-to-run installer for Windows:
+<div align="center">
 
-[![Download v1.0.0](https://img.shields.io/badge/⬇️%20Download%20v1.0.0-E--LibrarySetup.exe-blue?style=for-the-badge)](https://github.com/Mazen657/E-Library/releases/download/v1.0.0/E-LibrarySetup.exe)
+[![Download v1.0.0](https://img.shields.io/badge/⬇️%20Download%20E--LibrarySetup.exe%20—%20v1.0.0-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Mazen657/E-Library/releases/download/v1.0.0/E-LibrarySetup.exe)
 
-1. Run `E-LibrarySetup.exe`
-2. Follow the installation wizard
-3. Launch **E-Library** from your desktop or Start Menu
+</div>
 
-> **Requirements:** Windows 7 / 8 / 10 / 11 (64-bit recommended), .NET Framework 4.8
+1. Click the button above to download `E-LibrarySetup.exe`
+2. Run the installer and follow the on-screen wizard
+3. Launch **E-Library** from your Desktop or Start Menu
+4. The app automatically sets up the database on first run ✅
 
 ---
 
-### Option 2 — Build from Source
+### 🛠️ Option 2 — Build from Source
 
 **Prerequisites:**
-- Visual Studio 2019 or 2022
+- [Visual Studio 2019 or 2022](https://visualstudio.microsoft.com/) with `.NET desktop development` workload
 - .NET Framework 4.8 SDK
-
-**Steps:**
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/Mazen657/E-Library.git
+cd E-Library
 
-# 2. Open the solution in Visual Studio
+# 2. Open the solution
 #    Double-click: library_app.sln
 
 # 3. Restore NuGet packages
-#    Visual Studio will prompt automatically, or run:
-#    Tools → NuGet Package Manager → Restore
+#    Build → Restore NuGet Packages
+#    (Microsoft.Data.Sqlite, PdfiumViewer, SQLitePCLRaw)
 
 # 4. Build the solution
-#    Build → Build Solution  (or Ctrl+Shift+B)
+#    Build → Build Solution   (Ctrl + Shift + B)
 
 # 5. Run the application
-#    Press F5 or click Start
+#    Press F5 or click ▶ Start
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-Once launched, the app will automatically:
-- Initialize the local SQLite database
-- Create all required tables if they don't exist
-- Show the splash screen, then open the main dashboard
+On first launch, E-Library will automatically:
+- Create a local SQLite database file
+- Initialize all required tables
+- Display the splash screen and open the home dashboard
 
-**Typical workflow:**
+**Recommended workflow:**
 
-1. **Create a Category** → Go to the Categories section and add genres (e.g., Science, Fiction, History)
-2. **Add a Book** → Click "Add Book", fill in Title, Author, and select a Category. Optionally attach a PDF file
-3. **Browse Your Library** → View all books in the Books section, use the Search bar to filter
-4. **Read a Book** → Click on any book to open the detail view and preview the PDF inside the app
+```
+1. Create Categories  →  Sidebar → Categories → Add Category
+                          e.g., Fiction, Science, History, Programming
+
+2. Add Books          →  Books → Add Book
+                          Enter: Title, Author, Category
+                          Attach a PDF file (optional)
+
+3. Browse Library     →  View books in card layout
+                          Use the Search bar to filter instantly
+
+4. Read a Book        →  Click any card → Book Details
+                          PDF opens directly inside the app
+```
 
 ---
 
+<a id="database-schema"></a>
 ## 🗃️ Database Schema
 
-The SQLite database is automatically created on first launch. Below are the core tables:
+The SQLite database is created and maintained automatically on startup — no manual SQL required.
 
-### 📘 Books
-
-| Column | Type | Description |
-|---|---|---|
-| `id` | INTEGER | Primary key (auto-increment) |
-| `title` | TEXT | Book title |
-| `author` | TEXT | Author name |
-| `category_id` | INTEGER | Foreign key → Categories |
-| `file_path` | TEXT | Path to PDF file |
-| `cover` | TEXT | Optional cover image path |
-| `added_date` | DATETIME | Date the book was added |
-| `last_opened` | DATETIME | Last time the book was opened |
-
-### 📕 Categories
+### 📘 `Books`
 
 | Column | Type | Description |
 |---|---|---|
-| `id` | INTEGER | Primary key (auto-increment) |
-| `name` | TEXT | Category name |
+| `id` | `INTEGER` | Primary key, auto-increment |
+| `title` | `TEXT` | Book title |
+| `author` | `TEXT` | Author name |
+| `category_id` | `INTEGER` | Foreign key → `Categories.id` |
+| `file_path` | `TEXT` | Absolute path to PDF file |
+| `cover` | `TEXT` | Path to cover image (optional) |
+| `added_date` | `DATETIME` | When the book was added |
+| `last_opened` | `DATETIME` | Last time the book was viewed |
+
+### 📕 `Categories`
+
+| Column | Type | Description |
+|---|---|---|
+| `id` | `INTEGER` | Primary key, auto-increment |
+| `name` | `TEXT` | Category label |
+
+> 📌 Schema migrations run automatically at startup — missing columns are added without data loss.
 
 ---
 
@@ -160,39 +233,87 @@ The SQLite database is automatically created on first launch. Below are the core
 
 ```
 E-Library/
-├── library_app.sln              # Visual Studio solution file
-└── library_app/
-    ├── Program.cs               # App entry point, DB init, single-instance guard
-    ├── Forms/
-    │   ├── SplashForm.cs        # Startup splash screen
-    │   ├── Form1.cs             # Main dashboard
-    │   ├── BooksForm.cs         # Books list & management
-    │   ├── AddBookForm.cs       # Add new book
-    │   ├── BookDetailsForm.cs   # Book detail view + PDF preview
-    │   ├── CategoriesForm.cs    # Category management
-    │   ├── EditCategory.cs      # Edit/rename a category
-    │   └── SettingForm.cs       # App settings
-    ├── Controls/
-    │   ├── SearchBar.cs         # Reusable search bar control
-    │   ├── CardBook.cs          # Book card UI component
-    │   └── ControlWindow.cs     # Navigation container
-    ├── Helpers/
-    │   └── DatabaseHelper.cs    # SQLite DB logic & queries
-    └── Resources/               # Icons and assets
+│
+├── 📄 library_app.sln                    # Visual Studio solution
+├── 📄 library_app.csproj                 # Project build configuration
+├── 📄 App.config                         # Application configuration
+├── 📄 Program.cs                         # Entry point: DB init, mutex guard, splash
+├── 📄 packages.config                    # NuGet package references
+├── 🖼️  ICON.ico                           # Application icon
+│
+├── 📁 Form/                              # All UI screens
+│   ├── SplashForm.cs                     # Startup loading screen
+│   ├── Form1.cs                          # Root shell window
+│   ├── HomeForm.cs                       # Home dashboard
+│   ├── BooksForm.cs                      # Books list and card grid
+│   ├── AddBookForm.cs                    # Add new book form
+│   ├── BookDetailsForm.cs                # Book info + in-app PDF viewer
+│   ├── CategoriesForm.cs                 # Category list management
+│   ├── EditCategory.cs                   # Edit/rename category
+│   └── SettingForm.cs                    # App settings screen
+│
+├── 📁 Controls/                          # Reusable UI components
+│   ├── CardBook.cs                       # Book card UI component
+│   ├── CloseButton.cs                    # Custom window close button
+│   ├── ControlWindow.cs                  # Navigation shell container
+│   ├── Folders.cs                        # Folder/category navigation
+│   └── SearchBar.cs                      # Live search input control
+│
+├── 📁 Helpers/                           # Business logic & data access
+│   ├── DatabaseHelper.cs                 # All SQLite CRUD operations
+│   ├── PdfCoverHelper.cs                 # Extract PDF cover thumbnail
+│   └── SettingsManager.cs               # App settings read/write
+│
+├── 📁 Models/                            # Domain entities
+│   └── Book.cs                           # Book data model
+│
+├── 📁 Theme/                             # UI theming
+│   └── ThemeColor.cs                     # Color palette definitions
+│
+├── 📁 Icons/                             # Static image & icon assets
+│
+├── 📁 Screenshot/                        # App screenshots for README
+│
+└── 📁 Properties/                        # .NET auto-generated files
+    ├── AssemblyInfo.cs
+    ├── Resources.Designer.cs
+    ├── Resources.resx
+    ├── Settings.Designer.cs
+    └── Settings.settings
 ```
+
+---
+
+## 🤝 Contributing
+
+Contributions, bug reports, and feature requests are all welcome!
+
+1. **Fork** the repository
+2. **Create** a feature branch: `git checkout -b feature/your-feature`
+3. **Commit** your changes: `git commit -m "Add your feature"`
+4. **Push** to the branch: `git push origin feature/your-feature`
+5. **Open a Pull Request**
+
+> 💡 For major changes, please [open an issue](https://github.com/Mazen657/E-Library/issues) first to discuss your idea.
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for full details.
 
 ---
 
 <div align="center">
 
-Made with ❤️ by [Mazen Abdallah](https://github.com/Mazen657)
+**Built with ❤️ by [Mazen Abdallah](https://github.com/Mazen657)**
 
-⭐ If you find this project useful, consider giving it a star!
+<br/>
+
+If you find E-Library useful, please give it a ⭐ — it means a lot!
+
+[![GitHub Stars](https://img.shields.io/github/stars/Mazen657/E-Library?style=social)](https://github.com/Mazen657/E-Library/stargazers)
+&nbsp;&nbsp;
+[![GitHub Forks](https://img.shields.io/github/forks/Mazen657/E-Library?style=social)](https://github.com/Mazen657/E-Library/network/members)
 
 </div>
